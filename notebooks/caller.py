@@ -2,11 +2,8 @@ import sys
 import streamlit as st
 import pandas as pd
 import numpy as np
-from something import sayHey
 sys.path.append('../')
 from scripts.test import testfunc, removeText
-
-st.write("hello")
 
 name = st.text_input("Enter Your Name: ")
 
@@ -21,9 +18,9 @@ url = 'https://drive.google.com/uc?id=10rUiDQnhFUw_c43vHCpMFQweRtstpi2p'
 data = pd.read_csv(url)
 st.write(data)
 
-# chart_data = pd.DataFrame(
-#     np.random.randn()
-# )
+chart_data = pd.DataFrame(
+    np.random.randn(20,3),
+    columns=['A', 'B', 'C']
+)
 
-#sayHello(st)
-sayHey(st)
+st.bar_chart(chart_data)
