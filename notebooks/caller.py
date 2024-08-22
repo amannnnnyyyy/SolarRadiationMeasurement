@@ -17,12 +17,13 @@ if(clicked):
 else:
     testfunc(name,st)
 
-data = pd.read_csv('../data/benin-malanville.csv')
+url = 'https://drive.google.com/uc?id=10rUiDQnhFUw_c43vHCpMFQweRtstpi2p'
+data = pd.read_csv(url)
 st.write(data)
 
-chart_data = pd.DataFrame(
-    np.random.randn()
-)
+# chart_data = pd.DataFrame(
+#     np.random.randn()
+# )
 
 #sayHello(st)
 sayHey(st)
