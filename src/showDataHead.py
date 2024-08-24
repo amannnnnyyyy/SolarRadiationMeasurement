@@ -1,15 +1,21 @@
 import pandas as pd
+import pandas as pd
+import os
+base_dir = os.path.dirname(__file__)  # Directory of the current script
+beninFile = os.path.join(base_dir, '..', 'data', 'benin-malanville.csv')
+sierraFile = os.path.join(base_dir, '..', 'data','sierraleone-bumbuna.csv')
+togoFile = os.path.join(base_dir, '..', 'data','togo-dapaong_qc.csv')
 
-benin = '../data/benin-malanville.csv'
-sierra = '../data/sierraleone-bumbuna.csv'
-togo = '../data/togo-dapaong_qc.csv'
+# benin = '../data/benin-malanville.csv'
+# sierra = '../data/sierraleone-bumbuna.csv'
+# togo = '../data/togo-dapaong_qc.csv'
 def readData(city):
     if city == 'benin':
-        return pd.read_csv(benin)
+        return pd.read_csv(beninFile)
     elif city == 'sierra':
-        return pd.read_csv(sierra)
+        return pd.read_csv(sierraFile)
     elif city == 'togo':
-        return pd.read_csv(togo)
+        return pd.read_csv(togoFile)
     else:
         raise ValueError("City not found")
     
