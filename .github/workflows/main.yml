@@ -36,7 +36,7 @@ jobs:
 
     - name: Run Streamlit app
       run: |
-        nohup streamlit run scripts/app.py --server.headless true &
+        nohup streamlit run src/dashboard.py --server.headless true &
         sleep 10 
         pkill -f 'streamlit run'
       env:
