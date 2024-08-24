@@ -36,6 +36,6 @@ jobs:
 
     - name: Run Streamlit app (optional)
       run: |
-        streamlit run scripts/app.py --server.headless true
+        streamlit run src/app.py --server.headless true
       env:
         STREAMLIT_SERVER_HEADLESS: 'true'
