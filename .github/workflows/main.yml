@@ -37,7 +37,7 @@ jobs:
     - name: Run Jupyter Notebook tests
       run: |
         jupyter nbconvert --to script notebooks/jup.ipynb
-        python notebooks/jup.py || exit 1  # Exit with error if notebook script fails
+        python scripts/jup.py || exit 1  # Exit with error if notebook script fails
 
     - name: Run Streamlit app (optional)
       run: |
