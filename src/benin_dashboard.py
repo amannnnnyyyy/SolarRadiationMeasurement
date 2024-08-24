@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append('../')
-from scripts.showDataHead import readData, stats
-from scripts.dataCleanUp import removeComments
+from showDataHead import readData, stats
+from dataCleanUp import removeComments
 
 def show_analysis_benin():
     df = readData('benin')
