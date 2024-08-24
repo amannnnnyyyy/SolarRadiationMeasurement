@@ -1,4 +1,4 @@
-name: Solar Radius Measurement
+name: Solar Radiation Measurement
 
 on:
   push:
@@ -25,11 +25,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirement.txt
+        pip install jupyter
 
     - name: Run Jupyter Notebook tests
       run: |
         jupyter nbconvert --to script notebooks/jup.ipynb
-        python notebooks/jup.py
+        python notebooks/jup.py || exit 1
 
     - name: Run Streamlit app
       run: |
