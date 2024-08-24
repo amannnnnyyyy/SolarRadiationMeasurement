@@ -7,8 +7,8 @@ sierraFile = os.path.join(base_dir, '..', 'data','sierraleone-bumbuna.csv')
 togoFile = os.path.join(base_dir, '..', 'data','togo-dapaong_qc.csv')
 
 benin = pd.read_csv(beninFile)
-sierra = pd.read_csv('../data/sierraleone-bumbuna.csv')
-togo = pd.read_csv('../data/togo-dapaong_qc.csv')
+sierra = pd.read_csv(sierraFile)
+togo = pd.read_csv(togoFile)
 def removeComments(city):
     if city == 'benin':
         return benin.drop(['Comments'],axis=1)
