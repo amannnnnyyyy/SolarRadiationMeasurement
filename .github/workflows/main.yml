@@ -29,15 +29,15 @@ jobs:
 
     - name: Debug:List all files in repo
       run: |
-        ls -R  # List all files recursively to ensure files are in the correct locations
+        ls -R
 
     - name: Debug:List installed Python packages
       run: pip list
 
     - name: Run Jupyter Notebook tests
       run: |
-        jupyter nbconvert --to script notebooks/jup.ipynb
-        python scripts/jup.py || exit 1  # Exit with error if notebook script fails
+        jupyter nbconvert --to script scripts/jup.ipynb
+        python scripts/jup.py || exit 1
 
     - name: Run Streamlit app (optional)
       run: |
