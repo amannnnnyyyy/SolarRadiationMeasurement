@@ -12,3 +12,9 @@ def readData(city):
         return pd.read_csv(togo)
     else:
         raise ValueError("City not found")
+    
+
+    
+def stats(city):
+    data = readData(city)
+    return data.describe()
