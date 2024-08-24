@@ -34,8 +34,8 @@ jobs:
     - name: Debug:List installed Python packages
       run: pip list
 
-    - name: Run Streamlit app (optional)
+    - name: Run Streamlit app
       run: |
-        streamlit run src/app.py --server.headless true
+        streamlit run src/dashboard.py --server.headless true
       env:
         STREAMLIT_SERVER_HEADLESS: 'true'
