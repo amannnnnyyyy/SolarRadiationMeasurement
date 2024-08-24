@@ -37,5 +37,7 @@ jobs:
     - name: Run Streamlit app
       run: |
         streamlit run src/dashboard.py --server.headless true
+        sleep 10
+        pkill streamlit
       env:
         STREAMLIT_SERVER_HEADLESS: 'true'
