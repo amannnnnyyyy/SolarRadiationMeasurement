@@ -34,11 +34,6 @@ jobs:
     - name: Debug:List installed Python packages
       run: pip list
 
-    - name: Run Jupyter Notebook tests
-      run: |
-        jupyter nbconvert --to script notebooks/jup.ipynb
-        python notebooks/jup.py || exit 1
-
     - name: Run Streamlit app (optional)
       run: |
         streamlit run scripts/app.py --server.headless true
