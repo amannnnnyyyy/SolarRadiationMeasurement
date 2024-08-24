@@ -1,6 +1,12 @@
 import pandas as pd
+import os
 
-benin = pd.read_csv('../data/benin-malanville.csv')
+base_dir = os.path.dirname(__file__)  # Directory of the current script
+beninFile = os.path.join(base_dir, '..', 'data', 'benin-malanville.csv')
+sierraFile = os.path.join(base_dir, '..', 'data','sierraleone-bumbuna.csv')
+togoFile = os.path.join(base_dir, '..', 'data','togo-dapaong_qc.csv')
+
+benin = pd.read_csv(beninFile)
 sierra = pd.read_csv('../data/sierraleone-bumbuna.csv')
 togo = pd.read_csv('../data/togo-dapaong_qc.csv')
 def removeComments(city):
